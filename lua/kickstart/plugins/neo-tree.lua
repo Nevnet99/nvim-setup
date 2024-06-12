@@ -22,4 +22,7 @@ return {
       },
     },
   },
+  init = function()
+    vim.cmd 'Neotree position=right'
+  end,
 }
