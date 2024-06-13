@@ -154,6 +154,10 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- sets the tab width
+
+vim.cmd 'set tabstop=2'
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -657,12 +661,15 @@ require('lazy').setup({
         -- languages here or re-enable it for the disabled ones.
         local disable_filetypes = { c = true, cpp = true }
         return {
-          timeout_ms = 500,
-          lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
+          timeout_ms = 250,
+          lsp_fallback = true,
         }
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        typescript = { { 'prettierd', 'prettier' } },
+        go = { 'goimports', 'gofmt' },
+
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
