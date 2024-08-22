@@ -18,4 +18,6 @@ end
 require "lazy_setup"
 require "polish"
 
+vim.cmd("colorscheme rose-pine")
+
 vim.cmd('Neotree position=right')
