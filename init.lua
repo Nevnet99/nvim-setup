@@ -18,6 +18,6 @@ end
 require "lazy_setup"
 require "polish"
 
-vim.cmd("colorscheme rose-pine")
+vim.cmd "colorscheme carbonfox"
 
-vim.cmd('Neotree position=right')
+vim.cmd "Neotree position=right"

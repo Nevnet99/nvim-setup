@@ -1,4 +1,3 @@
-
 -- You can also add or configure plugins by creating files in this `plugins/` folder
 -- Here are some examples:
 
@@ -21,15 +20,15 @@ return {
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-" ▄████████  ▄██████▄  ████████▄     ▄████████  ▄████████ ███    █▄   ▄█           ███     ",
-"███    ███ ███    ███ ███   ▀███   ███    ███ ███    ███ ███    ███ ███       ▀█████████▄ ",
-"███    █▀  ███    ███ ███    ███   ███    █▀  ███    █▀  ███    ███ ███          ▀███▀▀██ ",
-"███        ███    ███ ███    ███  ▄███▄▄▄     ███        ███    ███ ███           ███   ▀ ",
-"███        ███    ███ ███    ███ ▀▀███▀▀▀     ███        ███    ███ ███           ███     ",
-"███    █▄  ███    ███ ███    ███   ███    █▄  ███    █▄  ███    ███ ███           ███     ",
-"███    ███ ███    ███ ███   ▄███   ███    ███ ███    ███ ███    ███ ███▌    ▄     ███     ",
-"████████▀   ▀██████▀  ████████▀    ██████████ ████████▀  ████████▀  █████▄▄██    ▄████▀   ",
-"                                                                         ▀                ",
+        " ▄████████  ▄██████▄  ████████▄     ▄████████  ▄████████ ███    █▄   ▄█           ███     ",
+        "███    ███ ███    ███ ███   ▀███   ███    ███ ███    ███ ███    ███ ███       ▀█████████▄ ",
+        "███    █▀  ███    ███ ███    ███   ███    █▀  ███    █▀  ███    ███ ███          ▀███▀▀██ ",
+        "███        ███    ███ ███    ███  ▄███▄▄▄     ███        ███    ███ ███           ███   ▀ ",
+        "███        ███    ███ ███    ███ ▀▀███▀▀▀     ███        ███    ███ ███           ███     ",
+        "███    █▄  ███    ███ ███    ███   ███    █▄  ███    █▄  ███    ███ ███           ███     ",
+        "███    ███ ███    ███ ███   ▄███   ███    ███ ███    ███ ███    ███ ███▌    ▄     ███     ",
+        "████████▀   ▀██████▀  ████████▀    ██████████ ████████▀  ████████▀  █████▄▄██    ▄████▀   ",
+        "                                                                         ▀                ",
       }
       return opts
     end,
@@ -77,13 +76,23 @@ return {
     end,
   },
   {
-  "OlegGulevskyy/better-ts-errors.nvim",
-  dependencies = { "MunifTanjim/nui.nvim" },
-  config = {
-    keymaps = {
-      toggle = '<leader>dd', -- default '<leader>dd'
-      go_to_definition = '<leader>dx' -- default '<leader>dx'
-    }
-  }
-}
+    "OlegGulevskyy/better-ts-errors.nvim",
+    dependencies = { "MunifTanjim/nui.nvim" },
+    config = {
+      keymaps = {
+        toggle = "<leader>dd", -- default '<leader>dd'
+        go_to_definition = "<leader>dx", -- default '<leader>dx'
+      },
+    },
+  },
+  {
+    "m4xshen/hardtime.nvim",
+    lazy = false,
+    dependencies = { "MunifTanjim/nui.nvim" },
+    opts = {},
+  },
+  {
+    "sphamba/smear-cursor.nvim",
+    opts = {},
+  },
 }

@@ -1,10 +1,6 @@
 return {
-  "rose-pine/neovim",
-  name = "rose-pine",
-  opts = {
-    variant = 'main',
-    styles = {
-      transparency = true
-    }
-  },
+  "EdenEast/nightfox.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function() vim.cmd "colorscheme carbonfox" end,
 }
